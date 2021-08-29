@@ -21,7 +21,7 @@ class UnsplashApi {
 
             const resimResponse = await this.axiosNesne.get('/photos/random');
             console.log(resimResponse.data.urls.regular);
-            //return resimResponse.data.urls.regular;
+            return resimResponse.data.urls.regular;
 
         } catch(err){
 
