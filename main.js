@@ -1,2 +1,4 @@
 
-const ekran = new Ekran();
+import uygulama from './ekran.js';
+
+uygulama();

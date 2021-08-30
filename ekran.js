@@ -1,3 +1,6 @@
+import resimGetir from './unsplash_api.js';
+import sakaGetir from './joke_api.js';
+
 class Ekran {
 
     constructor() {
@@ -7,8 +10,8 @@ class Ekran {
 
     async sakaGetir() {
         //console.log("burda");
-        const rastgeleResim = await new UnsplashApi().randomResimGetir();
-        const rastgelesaka = await new JokeApi().randomSakaGetir();
+        const rastgeleResim = await resimGetir();
+        const rastgelesaka = await sakaGetir();
 
         const tumsonuclar = {
             rastgeleResim,
@@ -43,4 +46,9 @@ class Ekran {
       `;
 
     }
+}
+
+export default function uygulamayiBaslat() {
+
+    new Ekran();
 }
